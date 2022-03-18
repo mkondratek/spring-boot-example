@@ -14,4 +14,12 @@ public class Action {
     public Long userId;
     public Long gameId;
     public ActionType action;
+
+    public Action(){}
+
+    public Action(Long userId, Long gameId, ActionType action) {
+        this.userId = userId;
+        this.gameId = gameId;
+        this.action = action;
+    }
 }

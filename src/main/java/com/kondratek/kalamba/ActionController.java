@@ -11,10 +11,13 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("api")
 public class ActionController {
 
+    ObjectMapper objectMapper;
+
     private final ActionService actionService;
 
-    public ActionController(ActionService actionService) {
+    public ActionController(ActionService actionService, ObjectMapper objectMapper) {
         this.actionService = actionService;
+        this.objectMapper = objectMapper;
     }
 
     @GetMapping("/health")
@@ -31,7 +34,6 @@ public class ActionController {
     @GetMapping(path = "/actions")
     public ResponseEntity<String> getActions() {
         Iterable<Action> actions = actionService.getActions();
-        ObjectMapper objectMapper = new ObjectMapper();
         try {
             String jsonString = objectMapper.writeValueAsString(actions);
             return ResponseEntity.ok(jsonString);
