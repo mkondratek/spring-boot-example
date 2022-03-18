@@ -1,0 +1,10 @@
+POST http://localhost:8080/api/action
+Content-Type: application/json
+
+{
+  "userId": 2,
+  "gameId": 8,
+  "action": "JOIN"
+}
+
+###
