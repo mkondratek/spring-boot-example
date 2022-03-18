@@ -1,9 +1,5 @@
 project.ext.versions = [
         spring : '2.6.4',
-        junit  : '5.8.2',
-        junit_runner: '1.8.2',
         junit_jupyter: '4.4.0',
-        surefire: '2.22.2',
-        mockito: '2.21.0',
         h2     : '2.1.210'
 ]

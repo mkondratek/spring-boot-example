@@ -18,14 +18,9 @@ dependencies {
     implementation "org.springframework.boot:spring-boot-starter:${versions.spring}"
     implementation "org.springframework.boot:spring-boot-starter-data-jpa:${versions.spring}"
     implementation "org.springframework.boot:spring-boot-starter-data-rest:${versions.spring}"
-    testImplementation "org.springframework.boot:spring-boot-starter-test:${versions.spring}"
 
-//    testImplementation "org.junit.jupiter:junit-jupiter-api:${versions.junit}"
-//    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${versions.junit}"
-//    testRuntimeOnly "org.mockito:mockito-core:${versions.mockito}"
-    testRuntimeOnly "org.junit.platform:junit-platform-runner:${versions.junit_runner}"
-    testRuntimeOnly "org.mockito:mockito-junit-jupiter:${versions.junit_jupyter}"
-//    implementation "rg.apache.maven.plugins:maven-surefire-plugin:${versions.surefire}"
+    testImplementation "org.springframework.boot:spring-boot-starter-test:${versions.spring}"
+    testImplementation "org.mockito:mockito-junit-jupiter:${versions.junit_jupyter}"
 
     runtimeOnly "com.h2database:h2:${versions.h2}"
 }
