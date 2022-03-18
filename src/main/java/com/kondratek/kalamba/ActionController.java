@@ -2,21 +2,24 @@ package com.kondratek.kalamba;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.*;
 
 
+@RestController
+@RequestMapping("api")
 public class ActionController {
 
     private final ActionService actionService;
 
-    @Autowired
     public ActionController(ActionService actionService) {
         this.actionService = actionService;
+    }
+
+    @GetMapping("/health")
+    public ResponseEntity<String> health() {
+        return ResponseEntity.ok().body("ok");
     }
 
     @PostMapping(path = "/action")
