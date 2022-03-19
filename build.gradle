@@ -22,7 +22,9 @@ dependencies {
     testImplementation "org.springframework.boot:spring-boot-starter-test:${versions.spring}"
     testImplementation "org.mockito:mockito-junit-jupiter:${versions.junit_jupyter}"
 
-    runtimeOnly "com.h2database:h2:${versions.h2}"
+    implementation 'mysql:mysql-connector-java:8.0.28'
+    implementation 'org.hibernate:hibernate-core:5.6.7.Final'
+
 }
 
 tasks.named('test') {

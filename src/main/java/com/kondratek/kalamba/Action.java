@@ -8,7 +8,7 @@ import javax.persistence.Id;
 @Entity(name = "Action")
 public class Action {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     public Long userId;
