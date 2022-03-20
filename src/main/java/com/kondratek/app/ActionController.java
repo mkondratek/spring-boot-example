@@ -1,4 +1,4 @@
-package com.kondratek.kalamba;
+package com.kondratek.app;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("api")
 public class ActionController {
 
-    ObjectMapper objectMapper;
+    private final ObjectMapper objectMapper;
 
     private final ActionService actionService;
 

@@ -1,4 +1,4 @@
-package com.kondratek.kalamba;
+package com.kondratek.app;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

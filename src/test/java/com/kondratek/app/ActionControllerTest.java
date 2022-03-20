@@ -1,4 +1,4 @@
-package com.kondratek.kalamba;
+package com.kondratek.app;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;

@@ -1,4 +1,4 @@
-package com.kondratek.kalamba;
+package com.kondratek.app;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,7 +9,7 @@ import javax.persistence.Id;
 public class Action {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long id; // todo: public?
 
     public Long userId;
     public Long gameId;
