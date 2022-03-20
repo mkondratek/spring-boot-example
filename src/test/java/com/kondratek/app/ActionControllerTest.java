@@ -44,7 +44,7 @@ class ActionControllerTest {
         ResponseEntity<String> actions = actionController.getActions();
 
         // then
-        Assertions.assertEquals("[{\"id\":0,\"userId\":1,\"gameId\":2,\"action\":\"LEAVE\"}]", actions.getBody());
+        Assertions.assertEquals("[{\"id\":0,\"userId\":1,\"gameId\":3,\"action\":\"LEAVE\"}]", actions.getBody());
         Assertions.assertEquals(HttpStatus.OK, actions.getStatusCode());
     }
 
