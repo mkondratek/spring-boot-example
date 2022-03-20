@@ -35,7 +35,7 @@ class ActionControllerTest {
     @Test
     void getActions_shouldReturnListAnd200WhenResultIsNonEmpty() throws JsonProcessingException {
         // given
-        Action action = new Action(1L, 2L, ActionType.LEAVE);
+        Action action = new Action(0L, 1L, 2L, ActionType.LEAVE);
         Set<Action> getActionsResult = Collections.singleton(action);
         Mockito.when(actionService.getActions()).thenReturn(getActionsResult);
         Mockito.when(objectMapper.writeValueAsString(getActionsResult)).thenCallRealMethod();
@@ -44,7 +44,7 @@ class ActionControllerTest {
         ResponseEntity<String> actions = actionController.getActions();
 
         // then
-        Assertions.assertEquals("[{\"userId\":1,\"gameId\":2,\"action\":\"LEAVE\"}]", actions.getBody());
+        Assertions.assertEquals("[{\"id\":0,\"userId\":1,\"gameId\":2,\"action\":\"LEAVE\"}]", actions.getBody());
         Assertions.assertEquals(HttpStatus.OK, actions.getStatusCode());
     }
 
