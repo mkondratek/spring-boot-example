@@ -33,7 +33,7 @@ This is because it tries to connect the DB before the DB is able to accept a con
 
 ## Usage 
 
-The app in both cases (non-dockerized and dockerized runs) can be accessed at [https://localhost:8080](https://localhost:8080).
+The app in both cases (non-dockerized and dockerized runs) can be accessed at [http://localhost:8080](https://localhost:8080).
 There are three REST endpoints: 
 0. `GET /api/health`
 1. `POST /api/action` allowing the addition of action objects
